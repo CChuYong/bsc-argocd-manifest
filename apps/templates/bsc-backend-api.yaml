@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bsc-backend-api
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: ''
+    namespace: bsc-backend-api
+    server: 'https://kubernetes.default.svc'
+  source:
+    path: bsc-backend-api/overlays/prod
+    repoURL: 'git@github.com:CChuYong/bsc-argocd-manifest.git'
+    targetRevision: HEAD
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
