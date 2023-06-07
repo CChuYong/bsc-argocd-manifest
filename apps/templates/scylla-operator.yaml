@@ -19,6 +19,48 @@ spec:
       repoURL: 'https://scylla-operator-charts.storage.googleapis.com/stable'
       targetRevision: v1.8.1
       chart: scylla
+      helm:
+        values: |-
+          nameOverride: ""
+          fullnameOverride: ""
+          scyllaImage:
+            repository: scylladb/scylla
+            tag: 5.0.5
+          agentImage:
+            repository: scylladb/scylla-manager-agent
+            tag: 3.0.1
+          serviceAccount:
+            create: true
+            annotations: {}
+          alternator:
+            enabled: false
+            port: 8000
+            writeIsolation: "always"
+          developerMode: false
+          cpuset: false
+          hostNetworking: false
+          automaticOrphanedNodeCleanup: false
+          sysctls: []
+          backups: []
+          repairs: []
+          
+          datacenter: "ap-northeast-2"
+          racks:
+            - name: "ap-northeast-2a"
+              scyllaConfig: "scylla-config"
+              scyllaAgentConfig: "scylla-agent-config"
+              members: 3
+              storage:
+                capacity: 10Gi
+              resources:
+                limits:
+                  cpu: 1
+                  memory: 2Gi
+                requests:
+                  cpu: 1
+                  memory: 2Gi
+          serviceMonitor:
+            create: false
   project: default
   syncPolicy:
     automated:
