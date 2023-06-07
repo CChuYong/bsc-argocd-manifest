@@ -10,12 +10,19 @@ spec:
     name: ''
     namespace: scylla
     server: {{ .Values.spec.destination.server }}
-  source:
-    path: ''
-    repoURL: 'https://scylla-operator-charts.storage.googleapis.com/stable'
-    targetRevision: v1.8.1
-    chart: scylla
-  sources: []
+  sources:
+    - path: ''
+      repoURL: 'https://scylla-operator-charts.storage.googleapis.com/stable'
+      targetRevision: v1.8.1
+      chart: scylla-operator
+    - path: ''
+      repoURL: 'https://scylla-operator-charts.storage.googleapis.com/stable'
+      targetRevision: v1.8.1
+      chart: scylla
+    - path: ''
+      repoURL: 'https://scylla-operator-charts.storage.googleapis.com/stable'
+      targetRevision: v1.8.1
+      chart: scylla-manager
   project: default
   syncPolicy:
     automated:
