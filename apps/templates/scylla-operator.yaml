@@ -1,0 +1,25 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: scylla-db
+  namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    name: ''
+    namespace: scylla
+    server: {{ .Values.spec.destination.server }}
+  source:
+    path: ''
+    repoURL: 'https://scylla-operator-charts.storage.googleapis.com/stable'
+    targetRevision: v1.8.1
+    chart: scylla
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
