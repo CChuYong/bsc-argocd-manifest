@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magcloud-backend-api
+  namespace: magcloud
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: magcloud-backend-api
+  template:
+    metadata:
+      labels:
+        app: magcloud-backend-api
+    spec:
+      containers:
+        - name: webserver
+          image: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-dev:f951f7fc95c5931bf6372fbc4ba540f3e47257cd
+          resources:
+            requests:
+              memory: "1Gi"
+              cpu: "250m"
+            limits:
+              memory: "1Gi"
+              cpu: "500m"
+          ports:
+            - containerPort: 8080
