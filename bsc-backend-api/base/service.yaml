@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: badsound-counter-api
+  namespace: bsc-backend-api
 spec:
   type: ClusterIP
   ports:
