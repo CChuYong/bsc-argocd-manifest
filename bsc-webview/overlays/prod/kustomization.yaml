@@ -4,4 +4,4 @@ resources:
 - ../../base
 images:
 - name: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-webview
-  newTag: c49df5a
+  newTag: cd165a4
