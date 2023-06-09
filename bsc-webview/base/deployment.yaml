@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bsc-webview
+  namespace: bsc-webview
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: bsc-webview
+  template:
+    metadata:
+      labels:
+        app: bsc-webview
+    spec:
+      containers:
+        - name: web
+          image: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-webview:e9f71c2
+          ports:
+            - containerPort: 3000
