@@ -13,7 +13,7 @@ spec:
   sources:
     - path: ''
       repoURL: 'https://charts.bitnami.com/bitnami'
-      targetRevision: 3.4.1
+      targetRevision: 22.1.5
       chart: kafka
   project: default
   syncPolicy:
