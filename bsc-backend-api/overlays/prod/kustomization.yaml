@@ -4,4 +4,4 @@ resources:
 - ../../base
 images:
 - name: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api
-  newTag: 021f88d
+  newTag: 5c8edd8
