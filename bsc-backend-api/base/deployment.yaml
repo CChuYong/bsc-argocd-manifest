@@ -16,5 +16,11 @@ spec:
       containers:
         - name: webserver
           image: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api:4304ea4
+          env:
+            - name: GOOGLE_FIREBASE_TOKEN
+              valueFrom:
+                configMapKeyRef:
+                  name: google-token
+                  key: token
           ports:
             - containerPort: 8080
