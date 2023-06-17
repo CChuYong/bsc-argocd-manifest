@@ -19,7 +19,7 @@ spec:
           env:
             - name: GOOGLE_FIREBASE_TOKEN
               valueFrom:
-                configMapKeyRef:
+                secretKeyRef:
                   name: google-token
                   key: token
           ports:
