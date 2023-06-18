@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api:4304ea4
+          image: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api:4304ea4
           env:
             - name: GOOGLE_FIREBASE_TOKEN
               valueFrom:

@@ -3,5 +3,5 @@ kind: Kustomization
 resources:
 - ../../base
 images:
-- name: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api
+- name: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api
   newTag: a08dee8

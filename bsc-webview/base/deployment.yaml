@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: web
-          image: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-webview:e9f71c2
+          image: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-webview:e9f71c2
           ports:
             - containerPort: 3000
