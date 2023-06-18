@@ -13,9 +13,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - bsc.bearus.co
+        - bsc.chuyong.kr
   rules:
-    - host: "bsc.bearus.co"
+    - host: "bsc.chuyong.kr"
       http:
         paths:
           - path: /

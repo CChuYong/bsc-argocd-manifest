@@ -13,9 +13,9 @@ metadata:
 spec:
   tls:
     - hosts:
-        - bsc-webview.bearus.co
+        - bsc-webview.chuyong.kr
   rules:
-    - host: "bsc-webview.bearus.co"
+    - host: "bsc-webview.chuyong.kr"
       http:
         paths:
           - path: /
