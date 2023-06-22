@@ -24,3 +24,4 @@ spec:
                   key: token
           ports:
             - containerPort: 8080
+            - containerPort: 7007
