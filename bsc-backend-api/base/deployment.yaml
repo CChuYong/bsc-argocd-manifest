@@ -5,7 +5,7 @@ metadata:
   namespace: bsc-backend-api
 spec:
   replicas: 2
-  minReadySeconds: 30
+  minReadySeconds: 15
   selector:
     matchLabels:
       app: badsound-counter-api
@@ -14,8 +14,6 @@ spec:
       labels:
         app: badsound-counter-api
     spec:
-      readinessGates:
-        - conditionType: target-health.alb.ingress.k8s.aws/badsound-counter-api_badsound-counter-api_8080
       containers:
         - name: webserver
           image: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/badsound-counter-api:4304ea4
@@ -31,4 +29,4 @@ spec:
           lifecycle:
             preStop:
               exec:
-                command: [ "/bin/sh", "-c", "sleep 40" ]
+                command: [ "/bin/sh", "-c", "sleep 15" ]
