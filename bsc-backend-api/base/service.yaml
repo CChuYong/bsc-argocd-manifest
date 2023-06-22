@@ -13,5 +13,6 @@ spec:
     - port: 7007
       targetPort: 7007
       protocol: TCP
+      name: websocket
   selector:
     app: badsound-counter-api
