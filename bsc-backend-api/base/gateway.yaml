@@ -13,3 +13,13 @@ spec:
         protocol: HTTP
       hosts:
         - "bsc.chuyong.kr"
+      tls:
+        httpsRedirect: true
+    - port:
+        number: 443
+        name: https
+        protocol: HTTPS
+      hosts:
+        - "bsc.chuyong.kr"
+      tls:
+        mode: PASSTHROUGH
