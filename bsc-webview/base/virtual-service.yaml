@@ -1,0 +1,17 @@
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: bsc-webview
+  namespace: bsc-webview
+spec:
+  hosts:
+    - "bsc-webview.chuyong.kr"
+  gateways:
+    - bsc-webview
+  http:
+    - name: "default-routes"
+      route:
+        - destination:
+            host: bsc-webview
+            port:
+              number: 80
