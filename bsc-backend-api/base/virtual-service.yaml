@@ -12,6 +12,6 @@ spec:
     - name: "default-routes"
       route:
         - destination:
-            host: service.yaml
+            host: badsound-counter-api
             port:
               number: 80
