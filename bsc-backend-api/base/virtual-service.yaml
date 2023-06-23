@@ -8,16 +8,16 @@ spec:
     - "bsc.chuyong.kr"
   gateways:
     - badsound-counter-api
-  tls:
-    - match:
-        - port: 443
-          sniHosts:
-            - "bsc.chuyong.kr"
-      route:
-        - destination:
-            host: badsound-counter-api
-            port:
-              number: 80
+#  tls:
+#    - match:
+#        - port: 443
+#          sniHosts:
+#            - "bsc.chuyong.kr"
+#      route:
+#        - destination:
+#            host: badsound-counter-api
+#            port:
+#              number: 80
   http:
     - name: "default-routes"
       route:
@@ -25,3 +25,9 @@ spec:
             host: badsound-counter-api
             port:
               number: 80
+#    - name: "default-routes-https"
+#      route:
+#        - destination:
+#            host: badsound-counter-api
+#            port:
+#              number: 443
