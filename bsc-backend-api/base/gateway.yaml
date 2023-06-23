@@ -20,6 +20,6 @@ spec:
         name: https
         protocol: HTTPS
       hosts:
-        - "bsc.chuyong.kr"
+        - '*'
       tls:
         mode: PASSTHROUGH
