@@ -20,4 +20,20 @@ spec:
         name: https
         protocol: HTTP
       hosts:
-        - '*'
+        - 'bsc.chuyong.kr'
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: Gateway
+metadata:
+  name: badsound-counter-api-ws
+  namespace: bsc-backend-api
+spec:
+  selector:
+    istio: ingressgateway
+  servers:
+    - port:
+        number: 443
+        name: https
+        protocol: HTTP
+      hosts:
+        - 'gateway.chuyong.kr'

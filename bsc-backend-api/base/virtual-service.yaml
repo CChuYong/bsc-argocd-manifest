@@ -8,16 +8,6 @@ spec:
     - "bsc.chuyong.kr"
   gateways:
     - badsound-counter-api
-#  tls:
-#    - match:
-#        - port: 443
-#          sniHosts:
-#            - "bsc.chuyong.kr"
-#      route:
-#        - destination:
-#            host: badsound-counter-api
-#            port:
-#              number: 80
   http:
     - name: "default-routes"
       route:
@@ -25,9 +15,21 @@ spec:
             host: badsound-counter-api
             port:
               number: 80
-#    - name: "default-routes-https"
-#      route:
-#        - destination:
-#            host: badsound-counter-api
-#            port:
-#              number: 443
+---
+apiVersion: networking.istio.io/v1alpha3
+kind: VirtualService
+metadata:
+  name: badsound-counter-api-ws
+  namespace: bsc-backend-api
+spec:
+  hosts:
+    - "gateway.chuyong.kr"
+  gateways:
+    - badsound-counter-api-ws
+  http:
+    - name: "default-routes"
+      route:
+        - destination:
+            host: badsound-counter-api
+            port:
+              number: 7007
