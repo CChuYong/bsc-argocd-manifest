@@ -4,3 +4,4 @@ metadata:
   name: bsc-webview
   labels:
     name: bsc-webview
+    istio-injection: enabled

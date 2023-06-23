@@ -4,5 +4,4 @@ metadata:
   name: bsc-backend-api
   labels:
     name: bsc-backend-api
-    elbv2.k8s.aws/pod-readiness-gate-inject: enabled
     istio-injection: enabled
