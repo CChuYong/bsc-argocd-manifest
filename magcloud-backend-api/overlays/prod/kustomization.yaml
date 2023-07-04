@@ -5,3 +5,5 @@ resources:
 images:
 - name: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-dev
   newTag: f951f7fc95c5931bf6372fbc4ba540f3e47257cd
+- name: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-api
+  newTag: 9fb7fa1
