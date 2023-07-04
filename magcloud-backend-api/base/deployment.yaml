@@ -16,6 +16,72 @@ spec:
       containers:
         - name: webserver
           image: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-api:f951f7fc95c5931bf6372fbc4ba540f3e47257cd
+          env:
+            - name: FLYWAY_URL
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: flyway-url
+            - name: MYSQL_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: mysql-username
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: mysql-password
+            - name: SERVER_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: server-port
+            - name: AUTH_SECRET
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: auth-secret
+            - name: KAKAO_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: kakao-client-id
+            - name: KAKAO_REDIRECT_URL
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: kakao-redirect-url
+            - name: APPLE_KEY_ID
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: apple-key-id
+            - name: APPLE_KEYFILE_value
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: apple-keyfile-value
+            - name: APPLE_TEAM_ID
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: apple-team-id
+            - name: APPLE_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: apple-client-id
+            - name: APPLE_NATIVE_CLIENT_ID
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: apple-native-client-id
+            - name: GOOGLE_FIREBASE_SECRET_VALUE
+              valueFrom:
+                secretKeyRef:
+                  name: magcloud-secret
+                  key: google-firebase-secret-value
           resources:
             requests:
               memory: "1Gi"
