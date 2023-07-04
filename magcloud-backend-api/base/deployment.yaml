@@ -4,7 +4,7 @@ metadata:
   name: magcloud-backend-api
   namespace: magcloud
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: magcloud-backend-api
@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: webserver
-          image: 013969630346.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-dev:f951f7fc95c5931bf6372fbc4ba540f3e47257cd
+          image: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-api:f951f7fc95c5931bf6372fbc4ba540f3e47257cd
           resources:
             requests:
               memory: "1Gi"
