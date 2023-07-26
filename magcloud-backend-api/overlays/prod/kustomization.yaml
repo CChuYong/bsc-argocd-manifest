@@ -4,4 +4,4 @@ resources:
 - ../../base
 images:
 - name: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/magcloud-backend-api
-  newTag: 6ef1e27
+  newTag: 4606c1f
