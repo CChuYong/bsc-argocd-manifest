@@ -12,7 +12,7 @@ spec:
     server: 'https://kubernetes.default.svc'
   source:
     path: chois-webview/overlays/prod
-    repoURL: 'git@github.com:CChuYong/chois-webview.git'
+    repoURL: 'git@github.com:CChuYong/bsc-argocd-manifest.git'
     targetRevision: HEAD
   sources: []
   project: default
