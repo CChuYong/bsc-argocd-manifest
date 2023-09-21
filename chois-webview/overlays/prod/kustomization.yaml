@@ -4,4 +4,4 @@ resources:
 - ../../base
 images:
 - name: 463935167443.dkr.ecr.ap-northeast-2.amazonaws.com/chois-webview-prod
-  newTag: 2aca120
+  newTag: "6001058"
