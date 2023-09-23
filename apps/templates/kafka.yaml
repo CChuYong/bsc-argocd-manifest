@@ -1,24 +1,24 @@
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
-  name: kafka
-  namespace: argocd
-  finalizers:
-    - resources-finalizer.argocd.argoproj.io
-spec:
-  destination:
-    name: ''
-    namespace: kafka
-    server: {{ .Values.spec.destination.server }}
-  sources:
-    - path: ''
-      repoURL: 'https://charts.bitnami.com/bitnami'
-      targetRevision: 22.1.5
-      chart: kafka
-  project: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
+#apiVersion: argoproj.io/v1alpha1
+#kind: Application
+#metadata:
+#  name: kafka
+#  namespace: argocd
+#  finalizers:
+#    - resources-finalizer.argocd.argoproj.io
+#spec:
+#  destination:
+#    name: ''
+#    namespace: kafka
+#    server: {{ .Values.spec.destination.server }}
+#  sources:
+#    - path: ''
+#      repoURL: 'https://charts.bitnami.com/bitnami'
+#      targetRevision: 22.1.5
+#      chart: kafka
+#  project: default
+#  syncPolicy:
+#    automated:
+#      prune: true
+#      selfHeal: true
+#    syncOptions:
+#      - CreateNamespace=true
