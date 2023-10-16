@@ -31,9 +31,15 @@ spec:
                   name: keycloak-admin
                   key: username
             - name: KC_PROXY
-              value: "edge"
+              value: "none"
             - name: KC_HOSTNAME_STRICT_HTTPS
               value: "false"
+            - name: KC_HOSTNAME
+              value: "sso.yeongmin.kr"
+            - name: KC_HOSTNAME_PORT
+              value: "443"
+            - name: KC_HTTP_ENABLED
+              value: "true"
           ports:
             - name: http
               containerPort: 8080
