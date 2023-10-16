@@ -40,6 +40,10 @@ spec:
               value: "443"
             - name: KC_HTTP_ENABLED
               value: "true"
+            - name: HOSTNAME_STRICT
+              value: "false"
+            - name: KC_HOSTNAME_STRICT
+              value: "false"
           ports:
             - name: http
               containerPort: 8080
