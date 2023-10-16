@@ -32,6 +32,8 @@ spec:
                   key: username
             - name: KC_PROXY
               value: "edge"
+            - name: KC_HOSTNAME_STRICT_HTTPS
+              value: "false"
           ports:
             - name: http
               containerPort: 8080
